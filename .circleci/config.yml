@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  goreleaser: ory/goreleaser@0.0.1
+  goreleaser: ory/goreleaser@0.0.2
 
 workflows:
   tbr:
