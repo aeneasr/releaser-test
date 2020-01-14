@@ -1,0 +1,21 @@
+version: 2.1
+
+orbs:
+  goreleaser: ory/goreleaser@0.0.1
+
+workflows:
+  tbr:
+    jobs:
+      - goreleaser/test:
+          filters:
+            tags:
+              only: /.*/
+
+      - goreleaser/release:
+          requires:
+            - goreleaser/test
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
