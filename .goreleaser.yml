@@ -9,6 +9,7 @@ before:
   hooks:
     - "go mod download"
 
+
 builds:
   -
     binary: releaser-test
